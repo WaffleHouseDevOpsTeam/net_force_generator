@@ -20,9 +20,9 @@ def string_conv(string):
             angle = float(re.findall(r'\d+', vector_coords[1])[0])
             if 'deg' in vector_coords[1]:
                 #print("degrees homie")
-                angle = angle * (180 / pi)
-            x = magnitude * cos(angle + pi)
-            y = magnitude * sin(angle + pi)
+                angle = angle * (pi / 180)
+            x = magnitude * cos(angle)
+            y = magnitude * sin(angle)
             vector_coords = [x, y]
     
         vector_coords[0] = float(vector_coords[0])
